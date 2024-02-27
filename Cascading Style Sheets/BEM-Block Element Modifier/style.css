@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    left: 40vw;
+    top: 200px;
+    background-color: orange;
+}
+.head__logo{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    padding: 20px;
+    color: red;
+}
+/* to modify a class we should us 'M' of "BEM" i.e modifier in this concept we assign a new class to overwrite a specific property */
+/* it is written as : previousClass--anything */
+
+/* let I want to change the font color of head__logo */
+.head__logo--color{
+    color: white;
+}

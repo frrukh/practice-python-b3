@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>winner</title>
+</head>
+<body>
+    <h1> create a button that simulates a lucky draw. when clicked, randomly select and display a winner from the participants.</h1>
+    <button id="btn" type="button">check winner</button>
+    <h2 id="h2"></h2>
+
+    <script>
+        let h2=document.getElementById('h2');
+        let btn=document.getElementById('btn');
+        let par=[
+            'Ali','Talha','Taha','Ahmed','Farha','Abdullah','Arsalan','Waqas','Farrukh','Muzammil','Rizwan','Noman','Rehan','Insaan'
+        ]
+        btn.addEventListener('click',function(){
+            h2.innerText='the luckey draw winner is  :  '+par[Math.floor(Math.random() * par.length)];
+        });
+    </script>
+</body>
+</html>

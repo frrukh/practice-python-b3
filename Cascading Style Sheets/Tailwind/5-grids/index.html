@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styel.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {  
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <title>Grid</title>
+</head>
+<body>
+<!-- Grid Template Column  -->
+  <!-- we can define parent grid using class grid and then define the columns quantity in each line using grid-cols-quantity and we can also give this quantity for different screens for responsiveness -->
+  <!-- to add grid gap we can use gap-size like given below -->
+    <div class="max-w-[1200px] py-5 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      <div class="bg-orange-500 py-5 text-center">1--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">2--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">3--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">4--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">5--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">6--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">7--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">8--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">9--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">10--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">11--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-orange-500 py-5 text-center">12--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>  
+    </div>
+
+    <br><br>
+    <hr class="text-red-900" style="border: 2px solid orange;">
+    <br><br>
+  <!-- After creating a simple structure we can span the columns and rows as given below -->
+    <div class="p-5 bg-orange-200 grid grid-cols-4 gap-4">
+      <!-- col-span-full will cover the full row -->
+      <div class="bg-green-500 p-2 text-red-600 col-span-full">1--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <!-- col-span-Number of columns will cover the targeted columns -->
+      <div class="bg-green-500 p-2 col-span-2">2--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <!-- we can also do column spaning using col-start-column and col-end-column+1 -->
+      <div class="bg-green-500 p-2">3--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-green-500 p-2">4--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-green-500 p-2 col-start-2 col-end-5">5--SPANING WITH col-start-2 col-end-5</div>
+      <!-- we can easily do this : that the column will cover the space of 2 or more columns but its width will modified and the space between that and next column will blank -->
+      <div class="bg-green-500 p-2 col-span-2 max-w-[500px]">6--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-green-500 p-2">7--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-green-500 p-2">8--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+    </div>
+
+    <br><br>
+    <hr class="text-red-900" style="border: 2px solid rgb(0, 149, 255);">
+    <br><br>
+    <!-- Grid template row -->
+    <!-- Using this we can define the rows of the grid instead of columns like this grid-rows-numberOfRows -->
+    <!-- This will not works until we will't pass the grid-flow-col -->
+    <div class="p-4 bg-pink-200 grid grid-rows-3 grid-flow-col gap-2">
+      <div class="bg-amber-200 p-2">1--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-amber-200 p-2">2--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-amber-200 p-2">3--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-amber-200 p-2">4--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-amber-200 p-2">5--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-amber-200 p-2">6--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-amber-200 p-2">7--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-amber-200 p-2">8--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+    </div>
+
+    <br><br>
+    <hr class="text-red-900" style="border: 2px solid rgb(255, 242, 0);">
+    <br><br>
+    <div class="p-4 bg-red-200 grid grid-rows-3 grid-flow-col gap-2">
+    <!-- Using col-span-2 or row-span-4 we can span the rows and columns -->
+      <div class="bg-gray-500 p-2 col-span-2">1--COL SPAN 2</div>
+      <div class="bg-gray-500 p-2 row-span-2">2--ROW SPAN 2</div>
+      <div class="bg-gray-500 p-2">3--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-gray-500 p-2">4--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <!-- Using row-start-1 and row-end-4 -->
+    <!-- we can do the same thing like row or col span using this more specifically -->
+      <div class="bg-gray-500 p-2 row-start-1 row-end-4">5--ROW START 1 AND ROW END 4</div>
+      <div class="bg-gray-500 p-2 col-start-4 col-end-7">6--COL START 4 AND COL END 7</div>
+      <div class="bg-gray-500 p-2">7--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-gray-500 p-2">8--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-gray-500 p-2">9--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-gray-500 p-2">10--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-gray-500 p-2">11--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+      <div class="bg-gray-500 p-2">12--Documentary Film is a broad category of visual expression that is based on the attempt, in one fashion or another, to document reality.</div>
+    </div>
+</body>
+</html>

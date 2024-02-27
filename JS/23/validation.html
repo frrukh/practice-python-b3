@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validations.</title>
+    <style>
+        .error{
+            display: block;
+            color: red;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <form action="#" id="form">
+        <label for="f_name">Enter First Name : </label>
+        <input type="text" name="f_name" id="f_name">
+        <span class="error" id="f_name_error"></span>
+        
+        <label for="l_name">Enter Last Name : </label>
+        <input type="text" name="l_name" id="l_name">
+        <span class="error" id="l_name_error"></span>
+        
+        <label for="age">Enter Your Age : </label>
+        <input type="number" name="age" id="age">
+        <span class="error" id="age_error"></span>
+
+        <label for="tel">Enter Your Phone Number : </label>
+        <input type="number" name="tel" id="tel">
+        <span class="error" id="tel_error"></span>
+
+        <label for="email">Enter Your Email</label>
+        <input type="text" name="email" id="email">
+        <span class="error" id="email_error"></span>
+        
+        <label for="password">Enter Your Password : </label>
+        <input type="password" name="password" id="password">
+        <span class="error" id="password_error"></span>
+
+        <label for="confirm_password">Confirm Your Password : </label>
+        <input type="password" name="confirm_password" id="confirm_password">
+        <span class="error" id="confirm_password_error"></span>
+
+        <button>Submit</button>
+    </form>
+
+
+    <script src="./validation.js"></script>
+</body>
+</html>

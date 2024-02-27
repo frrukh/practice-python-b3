@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block 'style' %}
+<link rel="stylesheet" href="{% static 'css/add_product.css' %}"> 
+{% endblock %}
+
+{% block 'title' %} Add Product {% endblock %}
+
+{% block 'body' %}
+    <h1 class="text-center my-5 bg">Add Product</h1>
+    <form class="container" action="{% url 'add_product' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-primary my-3">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-items</title>
+    <link rel="stylesheet" href="./flex-items.css">
+</head>
+<body>
+    <h1>flex-reverse</h1>
+    <div class="container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+
+    <hr>
+
+    <h1>flex-order</h1>
+    <div class="container1">
+        <div class="flex-item" style="order: 2;">1</div>
+        <div class="flex-item" style="order: 1;">2</div>
+        <div class="flex-item" style="order: 4;">3</div>
+        <div class="flex-item" style="order: 3;">4</div>
+        <div class="flex-item" style="order: 6;">5</div>
+        <div class="flex-item" style="order: 5;">6</div>
+    </div>
+
+    <hr>
+
+    <h1>flex-grow</h1>
+    <div class="container2">
+        <div class="flex-item" style="flex-grow: 0;">1</div>
+        <div class="flex-item" style="flex-grow: 1;">2</div>
+        <div class="flex-item" style="flex-grow: 2;">3</div>
+        <div class="flex-item" style="flex-grow: 3;">4</div>
+        <div class="flex-item" style="flex-grow: 4;">5</div>
+        <div class="flex-item" style="flex-grow: 5;">6</div>
+    </div>
+
+    <hr>
+
+    <h1>flex-shrink</h1>
+    <div class="container2">
+        <div class="flex-item" style="flex-shrink: 0;">1</div>
+        <div class="flex-item" style="flex-shrink: 1;">2</div>
+        <div class="flex-item" style="flex-shrink: 2;">3</div>
+        <div class="flex-item" style="flex-shrink: 3;">4</div>
+        <div class="flex-item" style="flex-shrink: 4;">5</div>
+        <div class="flex-item" style="flex-shrink: 5;">6</div>
+    </div>
+
+    <hr>
+
+    <h1>flex-basis</h1>
+    <!-- this is used to give the redefined or first time defined initial width -->
+    <div class="container2">
+        <div class="flex-item" style="flex-basis: 200px;">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item" style="flex-basis: 400px;">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+
+    <hr>
+
+    <h1>Flex:grow shrink and basis</h1>
+    <div class="container3">
+        <!-- syntax---flex:grow shrink basis -->
+        <div class="flex-item" style="flex: 5 0 200px;">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item" style="">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+
+    <hr>
+
+    <h1>Self Align</h1>
+    <!-- align any element horizontaly -->
+    <div class="container4">
+        <div class="flex-itemb" style="align-self: flex-start;">1</div>
+        <div class="flex-itemb" style="align-self: center;">2</div>
+        <div class="flex-itemb" style="align-self: flex-end;">3</div>
+        <div class="flex-itemb" style="align-self:stretch;">4</div>
+        <div class="flex-itemb" style="align-self: flex-start;">5</div>
+        <div class="flex-itemb" style="align-self: last baseline;">6</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='user.css')}}">
+    <title>users</title>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav__ul">
+                    <a href="/" class="nav__home">HOME</a>
+                    <a href="/quiz_app" class="nav__quiz_app">QUIZ APP</a>
+                    <a href="/todo_app" class="nav__todo_app">TODO APP</a>
+                    <a href="/weather_app" class="nav__weather_app">WEATHER APP</a>
+                    <a href="/signup" class="nav__signup">SIGNUP</a>
+                </ul>
+            </nav>
+        </header>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% for category,message in messages %}
+                
+                <div class="alert alert-{{category}} text-center mx-5">{{message}}</div>
+            {% endfor %}
+        {% endwith %}
+        <table class="mt-3 table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{user[0]}}</td>
+                    <td>{{user[1]}}</td>
+                    <td>{{user[2]}}</td>
+                    <td>{{user[3]}}</td>
+                    <td>{{user[4]}}</td>
+                    <td> &nbsp;&nbsp;&nbsp;<a href="/edit/{{user[0]}}"><i class="fa-solid fa-pen"></i></a></td>
+                    <td> &nbsp;&nbsp;&nbsp;<a href="/delete/{{user[0]}}"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+</body>
+
+</html>

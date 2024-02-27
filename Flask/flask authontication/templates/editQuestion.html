@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    {% include '_navbar.html' %}
+    <main>
+        <div class="d-flex flex-column align-items-center justify-content-center my-5">
+            <h1 class="my-5">Edit Question {{data[0]}}</h1>
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% for category, message in messages %}
+                    <p class="alert alert-{{category}}">{{message}}</p>
+                {% endfor %}
+            {% endwith %}
+            <form action="/question/edit/{{data[0]}}" method="POST" class="row">
+
+                <div class="col-12">
+                    <label for="title" class="form-label">Title</label>
+                    <textarea class="form-control" name="title" id="title"> {{data[1]}} </textarea>
+                </div>
+                    <div class="col-12">
+                        <label class="form-label">Options</label>
+                        <input type="text" class="form-control col-6" name="option" placeholder="Option 1" value="{{data[2][0]}}">
+                        <input type="text" class="form-control col-6" name="option" placeholder="Option 2" value="{{data[2][1]}}">
+                        <input type="text" class="form-control col-6" name="option" placeholder="Option 3" value="{{data[2][2]}}">
+                        <input type="text" class="form-control col-6" name="option" placeholder="Option 4" value="{{data[2][3]}}">
+                </div>
+                <div class="col-12">
+                    <label for="answer" class="form-label">Correct Answer</label>
+                    <input type="text" name="answer" id="answer" class="form-control" value="{{data[3]}}">
+                </div>
+                
+                <button class="btn btn-primary my-3 col-2">Update</button>
+          
+            </form>
+        </div>
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styel.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {  
+            screens: {
+                'sm': '640px',
+                // => @media (min-width: 640px) { ... }
+
+                'md': '768px',
+                // => @media (min-width: 768px) { ... }
+
+                'lg': '1024px',
+                // => @media (min-width: 1024px) { ... }
+
+                'xl': '1280px',
+                // => @media (min-width: 1280px) { ... }
+
+                '2xl': '1300px',
+                // => @media (min-width: 1536px) { ... }
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <title>Container</title>
+</head>
+<body>
+    <!-- container is the center part of the screen -->
+    <!-- in tailwind the container is given the min size of the screen i.e in small-screen its width will 640px and in medium its width will 768px and so on. -->
+    <span class="container mx-auto" style="display:block;">this is a span with display block</span><!--working after inline styling and  does not working on span because it is inline element -->
+    <div class="container mx-auto">This is a div</div>
+</body>
+</html>

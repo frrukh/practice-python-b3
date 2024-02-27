@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+
+        <style>
+            table , td , th {
+                border : 1px solid black ; 
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Simple Table</h1>
+        
+        <table>
+            <tr>
+                <td>Full Name of the employee</td>
+                <td>Number of languages</td>
+                <td>Mastered language</td>
+                <td>Salary demanded</td>
+            </tr>
+            <tr>
+                <td>Muhammad Inzmaam ul Haq</td>
+                <td>5</td>
+                <td><Python</td>
+                <td>1000000 pkr</td>
+            </tr>
+            <tr>
+                <td>Muhammad Bilal Ahmad</td>
+                <td>19</td>
+                <td>C++,Java,C#</td>
+                <td>20000000 pkr</td>
+            </tr>
+            <tr>
+                <td>Muhammad Ali Aslam Chohan</td>
+                <td>50</td>
+                <td> Javascript,Kotlin,Python,Go,Java
+
+                </td>
+                <td>70000000000 pkr</td>
+            </tr>
+            <tr>
+                <td>Muhammad Abdullad Qadri</td>
+                <td>69</td>
+                <td>Swift,R, Ruby, C and C++, Matlab, TypeScript, Scala, SQL</td>
+                <td>9000000000000 pkr</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Heading Table</h1>
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Full Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Muhammad Talha</td>
+                <td>Software Developer</td>
+                <td>$5000</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Muhammad Talha</td>
+                <td>Software Developer</td>
+                <td>$5000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Muhammad Ali</td>
+                <td>Software Developer</td>
+                <td>$3000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hammad Khalid</td>
+                <td>Frontend Developer</td>
+                <td>$4000</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Caption Table</h1>
+        <table>
+            <caption><h3>Details</h3></caption>
+            <tr>
+                <th>No.</th>
+                <th>Full Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Muhammad Talha</td>
+                <td>Software Developer</td>
+                <td>$5000</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Muhammad Talha</td>
+                <td>Software Developer</td>
+                <td>$5000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Muhammad Ali</td>
+                <td>Software Developer</td>
+                <td>$3000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hammad Khalid</td>
+                <td>Frontend Developer</td>
+                <td>$4000</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Table Sections</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Muhammad Ali</td>
+                    <td>Software Developer</td>
+                    <td>$3000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hammad Khalid</td>
+                    <td>Frontend Developer</td>
+                    <td>$4000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total Salary</th>
+                    <th></th>
+                    <th></th>
+                    <th>$17000</th>
+                </tr>
+            </tfoot>
+            
+        </table>
+        <hr>
+        <h1>Col group Table</h1>
+        <table>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col style="background-color: aquamarine;">
+            </colgroup>
+            <thead>
+                <tr style="background-color: bisque;">
+                    <th>No.</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>    
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Muhammad Ali</td>
+                    <td>Software Developer</td>
+                    <td>$3000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hammad Khalid</td>
+                    <td>Frontend Developer</td>
+                    <td>$4000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total Salary</th>
+                    <th></th>
+                    <th></th>
+                    <th>$17000</th>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
+        <h1>Col span Table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Muhammad Ali</td>
+                    <td>Software Developer</td>
+                    <td>$3000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hammad Khalid</td>
+                    <td>Frontend Developer</td>
+                    <td>$4000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Salary</td>
+                    <td>$17000</td>
+                </tr>
+            </tfoot>
+            
+        </table>
+        <hr>
+        <h1>Row span Table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="2">Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <!-- <td>Muhammad Talha</td> -->
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Muhammad Ali</td>
+                    <td>Software Developer</td>
+                    <td>$3000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hammad Khalid</td>
+                    <td>Frontend Developer</td>
+                    <td>$4000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total Salary</td>
+                    <td>$17000</td>
+                </tr>
+            </tfoot>
+            
+        </table>
+        <hr>
+        <h1>All in one</h1>
+        <table>
+            <caption>Using all table functions</caption>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col style="background-color: bisque;">
+            </colgroup>
+            <thead>
+                <tr style="background-color: gold;">
+                    <th>No.</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="2">Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <!-- <td>Muhammad Talha</td> -->
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Muhammad Ali</td>
+                    <td>Software Developer</td>
+                    <td>$3000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hammad Khalid</td>
+                    <td>Frontend Developer</td>
+                    <td>$4000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3">Total Salary</th>
+                    <!-- <th></th> -->
+                    <!-- <th></th> -->
+                    <th>$17000</th>
+                </tr>
+            </tfoot>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+</html>

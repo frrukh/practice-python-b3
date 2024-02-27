@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*::selection{
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+#main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+
+#nav{
+    /* background-color: red; */
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    text-transform: uppercase;
+}
+
+#nav>img{
+    height: 60px;
+}
+
+#nav #nav__part2{
+    display: flex;
+    gap: 30px;
+    font-weight: 500;
+}
+
+#nav #nav__part3{
+    display: flex;
+    gap: 30px;
+    font-weight: 500;
+    align-items: center;
+}
+
+#nav #nav__part3 button{
+    color: black;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+}
+
+#nav #nav__part3 button::selection{
+    color: white;
+    background-color: black;
+}
+
+#main h1{
+    font-size: 120px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#main h1:nth-of-type(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main h1 span{
+    background-color: rgb(147, 77, 77);
+    font-size: 30px;
+    padding: 20px 30px;
+    border-radius: 50px;
+    /* height: 100px; */
+    margin-inline: 30px ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: none;
+}
+
+#main h1 span::selection{
+    background-color: white;
+    color: rgb(147, 77, 77)
+    /* color: black; */
+}
+
+#main #img_left{
+    position: absolute;
+    top: 170px;
+    left: 70px;
+    width: 160px;
+    border-radius: 10px;
+    /* opacity: 80%; */
+}
+
+#main #img_right{
+    width: 200px;
+    position: absolute;
+    bottom: 170px;
+    right: 70px;
+    border-radius: 10px;
+}
+
+#main #img_bottom{
+    position: absolute;
+    bottom: 100px;
+    left: 15%;
+    width: 300px;
+    border-bottom: 1px solid yellow;
+}
+
+#main #scroll_down{
+    /* background-color: red; */
+    display: inline;
+    padding: 10px;
+    font-size: 25px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+}

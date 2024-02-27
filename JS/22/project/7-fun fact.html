@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts</title>
+</head>
+<body>
+    <h1> create a function that displays an alert with a random fun fact when clicked.</h1>
+    <button type="button" id="btn">Click to read a fun face.</button>
+
+
+    <script>
+        let btn=document.getElementById('btn');
+        let facts=[
+        "The colors of a rainbow always appear in the same order.",
+        'Red is the first color a baby can see.',
+        "A blue whale's tongue is heavier than an elephant.",
+        "A crab's taste buds are on their feet.",
+        'Octopi have three hearts.',
+        'On average, the human heart beats 100,000 times a day.',
+        "Wrestling was the world's first sport.",
+        'Clouds can travel at more than 100 mph with the jet stream.',
+        'Golf is the only sport to be played on the moon.',
+        'Apples are in the rose family.',
+        ]
+        btn.addEventListener('click',function(){
+            alert(facts[Math.floor(Math.random()*facts.length)]);
+        });
+
+        
+        
+    </script>
+</body>
+</html>

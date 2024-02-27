@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functionsProject</title>
+</head>
+
+<body>
+    <div>
+        <h1>Tasks</h1>
+        <ul>
+            <li>Create a function that takes two numbers as input and returns the largest of the two.</li>
+            <li>create a function that takes two strings as input and returns a new string that concatenates both of
+                them.</li>
+            <li>Write a function that takes a temperature in celsius and converts it to Fahrenheit.</li>
+            <li>Write a program that takes the age and checks if they are eligible for voting (e.g 18 or older)</li>
+            <li>Implement a function that checks if aber given num is positive, negative, or zero and return the result.
+            </li>
+            <li>create a function that takes two numbers as input and returns their product using arithmetic operations.
+                (e.g the product of 2 and 3 is 6)</li>
+            <li>implement a function that takes two strings as input and checks if they are equal.</li>
+            <li>Write a function that takes a number as input and returns the absolute value of the number</li>
+        </ul>
+    </div>
+
+
+    <script>
+        //Create a function that takes two numbers as input and returns the largest of the two.
+        function findLarger(a, b) {
+            console.log("a : " + a);
+            console.log("b : " + b);
+            if (a > b) {
+                console.log("Larger number is : " + a);
+            } else if (a < b) {
+                console.log("Larger number is : " + b);
+            } else (
+                console.log("Both of a and b are equal")
+            )
+        }
+        findLarger(4, 3);
+        findLarger(4, 5);
+        findLarger(3, 3);
+
+        //create a function that takes two strings as input and returns a new string that concatenates both of them.
+        function concatenate(a, b) {
+            console.log("a : " + a);
+            console.log("b : " + b);
+
+            console.log(a + " " + b);
+        }
+        concatenate('Farrukh', 'Maqsood');
+
+        //Write a function that takes a temperature in celsius and converts it to Fahrenheit.
+        function temp_unit(temperature_in_celsius) {
+            console.log("temperature in Celsius : " + temperature_in_celsius);
+            let temperature_in_fahrenheit = (temperature_in_celsius * 1.8) + 32;
+            console.log("temperature in fahrenheit :" + temperature_in_fahrenheit);
+        }
+        temp_unit(100);
+
+        // Write a program that takes the age and checks if they are eligible for voting (e.g 18 or older).
+        function Age(age) {
+            console.log("age : " + age);
+            if (age >= 0) {
+                if (age >= 18) {
+                    console.log("eligible for voting.");
+                } else { 
+                    console.log("not eligible for voting."); 
+                }
+            }else {
+                console.log("plese enter a valid age.");
+            }
+        }
+        Age(2);
+
+        //Implement a function that checks if aber given num is positive, negative, or zero and return the result.
+        function possitiveOrNegative(a) {
+            console.log("given number : "+a);
+            if(a>0){
+                console.log("the given number ia positive");
+            }else if(a<0){
+                console.log("the given number is negative");
+            }else {
+                console.log("the given number is Zero");
+            }
+        }
+        possitiveOrNegative(12);
+        possitiveOrNegative(-12);
+        possitiveOrNegative(0);
+
+        //create a function that takes two numbers as input and returns their product using arithmetic operations.(e.g the product of 2 and 3 is 6.
+        function Product(num1,num2) {
+            console.log("num 1 : "+num1);
+            console.log("num 2 : "+num2);
+            let product = num1*num2;
+            console.log("the product of num 1 and num2 is : "+product);
+        }
+        Product(12,23);
+        Product(2,23);
+
+        //implement a function that takes two strings as input and checks if they are equal.
+        function string_eq(s1,s2){
+            console.log("string 1 : "+s1);
+            console.log("string 2 : "+s2);
+            
+            if(s1===s2){
+                console.log("string 1 is equal to string 2");
+            }else{
+                console.log("string 1 is not equal to string 2");
+            }
+        }
+        string_eq("farrukh","farrukh");
+
+       // 1-- //Write a function that takes a number as input and returns the absolute value of the number.
+        function absoluteValue(value){
+            console.log("given number : "+value);
+            if(value>=0){
+                console.log("the absolute value of given number is : "+value);
+            }else{
+                let absolute_value=value*(-1);
+                console.log("the absolute value of given number is :"+absolute_value);
+            }
+        }
+        absoluteValue(-20);
+
+       // 2-- //Write a function that takes a number as input and returns the absolute value of the number.
+       function absValue(x){
+        console.log("given nubmer :  "+x)
+        let a = Math.abs(x);
+        console.log("the absolute value of given number is :"+a);
+       }
+       absValue(-2);
+
+
+    </script>
+</body>
+
+</html>

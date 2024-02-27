@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment button</title>
+    <style>
+        div{
+            background-color: antiquewhite;
+            border: 2px solid grey;
+            border-radius: 6px;
+        }
+        #heading {
+            margin: 100px 30px 20px 400px;
+
+        }
+
+        #btn {
+            margin: 0px 30px 20px 330px;
+            display: inline-block;
+        }
+        #btn1 {
+            /* margin: 0px 30px 20px 370px; */
+            margin-left: 14px;
+            display: inline-block;
+            
+        }
+        #btn2 {
+            margin-left: 44px;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>build a counter that increments when a button is clicked and displays the count on the page.</h1>
+    <div>
+        <h1 id="heading">0</h1>
+
+        <button type="button" id="btn">  +  </button>
+
+        <button type="button" id="btn1">  -  </button>
+        
+        <button type="button" id="btn2">  Reset  </button>
+    </div>
+
+    <script>
+        let count=0;
+        let num=document.getElementById('heading');
+        let btn=document.getElementById('btn');        
+        let btn1=document.getElementById('btn1');
+        let btn2=document.getElementById('btn2');
+       
+        btn.addEventListener('click',function(){
+            num.innerText=++count;
+        });
+
+        btn1.addEventListener('click',function(){
+            num.innerText=--count;
+        });
+
+        btn2.addEventListener('click',function(){
+            let reset=0;
+            num.innerText=reset;
+            count=reset;
+        });
+        </script>
+</body>
+
+</html>

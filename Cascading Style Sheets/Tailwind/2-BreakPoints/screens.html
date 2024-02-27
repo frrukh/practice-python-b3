@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./screens.css">
+    <title>Break Points</title>
+    <!-- linking tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- linking code to customize the tailwind code -->
+    <script>
+        tailwind.config = {
+          theme: {
+// we can change the default screen-size as I have done in sm size
+            screens: {
+              'sm': '640px',
+              // => @media (min-width: 640px) { ... }
+
+              'md': '768px',
+              // => @media (min-width: 768px) { ... }
+
+              'lg': '1024px',
+              // => @media (min-width: 1024px) { ... }
+
+              'xl': '1280px',
+              // => @media (min-width: 1280px) { ... }
+
+              '2xl': '1536px',
+              // => @media (min-width: 1536px) { ... }
+            },
+            extend: {
+// we can also define our own new screen as we wish.
+// we have to give the minimum and maximum values other wise if we give only min value it maps on all screens over the minimum size.
+
+              screens: {
+                'xsm': {min:'360px',max:'645px'},
+                'xxsm':{min:'200px',max:'290px'}
+              },
+              colors: {
+                farrukh: '#5090ff',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <div class=" xxsm:text-farrukh xsm:text-red-600 sm:text-farrukh md:text-red-600 lg:text-farrukh xl:text-red-600 2xl:text-farrukh">FONT</div>
+</body>
+</html>

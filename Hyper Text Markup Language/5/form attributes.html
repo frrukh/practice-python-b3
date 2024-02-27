@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>form attributes</title>
+</head>
+<body>
+    <h1>datalistand and option element and list attributes </h1>
+    <!-- datalist element: it is used to show the dropdown list with pre-defined options in datalist element we give it a specific id to link it with the input.
+    option element: it is used to give the particals of the list ,in datalist we use this element with only opening tag in opposite to option element. -->
+
+     <!-- list attribute: it is used to give the id of datalist to the input element. -->
+
+    <form method="get" action="">
+        <label for="name">enter your name</label>
+        <input type="text" name="name" id="name" list="name_list">
+
+        <datalist id="name_list">
+
+            <option value="Talha">
+            <option value="Farrukh">
+            <option value="Abdullah">
+            <option value="Farhan">
+            <option value="Furqan">
+            </datalist>
+        <label for="email">enter your email</label>
+        <input type="email" name="email" id="email" list="email_list">
+        <datalist id="email_list">
+            <option value="farrukh@gmail.com">
+            <option value="farrukhmaqsood@gmail.com">
+            <option value="farrukhmaqsood11@gmail.com">
+            <option value="farrukhmaqsood112@gmail.com">
+            <option value="farrukhmaqsood1122@gmail.com">
+        </datalist>
+        
+
+        <button>login</button>
+
+
+    <hr>
+
+    <hr>
+        <h1>output element</h1>
+        <!-- this is used to print output specifically -->
+        <output>this is output</output>
+    </form>
+
+
+
+
+
+
+    <hr>
+    <hr>
+    <h1>target</h1>
+
+    <form method="get" action="" target="_blank">
+
+        <input type="text" name="name" placeholder="enter name">
+        <br>
+        <input type="number" name="number" placeholder="enter number" >
+        <br>
+        <button>Login</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>autocomplete</h1>
+    <!-- remove auto suggesstions -->
+    <!-- by default it is ON -->
+    <form action="">
+        <label for="n">enter your name</label>
+        <input type="text" name="name" id="n" autocomplete="off">
+        <br>
+        <label for="eml">enter user name</label>
+        <input type="email" name="email" id="eml" autocomplete="on">
+        <br>
+        <label for="num">enter</label>
+        <input type="tel" name="number" id="num">
+        <button>Login</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>required input</h1>
+    <form method="get" action="">
+        <input type="text" name="name" placeholder="enter your name" required>
+    <br>
+        <input type="email" name="email" placeholder="enter your email" required>
+        <button>login</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>novalidate</h1>
+    <!-- it removes any type of validation -->
+    <form method="get" action="" novalidate>
+        <input type="text" name="first_name" placeholder="enter first name" required>
+        <input type="email" name="email" placeholder="enter email" required>
+        <button>login</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>selected</h1>
+    <form method="get" action="">
+        <label for="dropdown">select a subject</label>
+        <select name="subject" id="dropdown">
+            <option value="">select subject</option>
+            <option value="python">Python</option>
+            <option value="java_scripts">Java Scripts</option>
+            <option value="java" selected>Java</option>
+            <option value="C++">C++</option>
+        </select>
+        <button>signup</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>multiple <sub>by holding <kbd>ctrl</kbd></sub></h1>
+    <form method="get" action="">
+        <label for="ddown">enter subjects</label>
+        <select name="sub" id="ddown" multiple>
+            <option value="">select subject</option>
+            <option value="python">Python</option>
+            <option value="java_scripts">Java Scripts</option>
+            <option value="java">Java</option>
+            <option value="C++">C++</option>
+        </select>
+        <button>signup</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>readonly</h1>
+    <form method="get" action="">
+        <input type="email" name="email" value="farrukh@gmail.com" readonly>
+        <button>login</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>disabled</h1>
+    <form method="get" action="">
+        <input type="text" name="name" value="farrukh maqsood" disabled>
+        <button>login</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>size</h1>
+    <!-- increse the lenth of input box -->
+    <form method="get" action="">
+        <input type="email" name="email" placeholder="enter email" size="100">
+    </form>
+    <hr>
+    <hr>
+    <h1>maxlength</h1>
+    <!-- it defines the maximum number of characters -->
+    <form method="get" action="">
+        <label for="father_name">enter father name</label>
+        <input type="text" id="father_name" maxlength="5">
+    </form>
+    <hr>
+    <hr>
+    <h1>min</h1>
+    <!-- only used in number -->
+    <form method="get" action="">
+        <input type="number" name="age" placeholder="min age=12" min="12">
+        <button>signup</button>
+    </form>
+    <hr>
+    <hr>
+    <form method="get" action="">
+        <input type="number" name="age" placeholder="max age=65" max="65">
+        <button>signup</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>min and max</h1>
+    <form method="get" action="">
+        <input type="number" name="age" placeholder="5-50" min="5" max="50">
+        <button>login</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>step</h1>
+    <!-- only for number, to give the number of characters after decimal point -->
+    <form method="get" action="">
+        <input type="number" name="price" id="price" placeholder="max 2 char.. after decimal" step="0.01">
+        <button>signup</button>
+    </form>
+    <hr>
+    <hr>
+    <h1>pattern</h1>
+    <!-- it defines the data pattren -->
+    <form method="get" action="">
+        <input type="text" name="pattern" placeholder="0-9" pattern="[0-9]+">
+        <input type="text" name="pattern" placeholder="a-z" pattern="[a-z]+">
+        <button>submit</button>
+    </form>
+    <hr>
+    <hr>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

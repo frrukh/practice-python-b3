@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Framework</title>
+    <!-- This is the main TailwindLink link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // this is the function of Tailwind to manipulate its defaults in html page
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                farrukh: '#9f00f9',
+                font:'900'
+              }
+            }
+          }
+        }
+      </script>
+      <style>
+        div{
+            font-size: 5rem;
+        }
+      </style>
+</head>
+<body>
+    <!-- Tailwind -->
+    <!-- It is a framework for CSS that is used to create amazing layouts and much more -->
+    <!-- Like bootstrap it has its own predefined classes and we just have to assign the class and the styling will applied  -->
+    <!-- in bootstrap we have a CSS file and we just have to link that with code but in Tailwind we have a script file that generate the CSS code so the Tailwind is faster then bootstrap as it does't have 12000+ lines of code to load ! -->
+    <!-- IN bootstrap we can't customize the bootstrap's classes but against that in Tailwind we can customize the classes as we wish -->
+
+    <div class="text-farrukh italic">
+        <h1>hello</h1>
+    </div>
+</body>
+</html>

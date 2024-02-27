@@ -1,0 +1,120 @@
+.blocked-a{
+    /* we can change the inline into block and vice versa */
+    display: inline;display: block;
+}
+
+.inline-p{
+    display: inline;
+}
+
+.none-display{
+
+    /* dispaly=none means the element will deleted from its place and does not occupy any space.*/
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* in inline elements we can not add height and width */
+.inline-with-height-and-width{
+    background-color: burlywood;
+    border: 2px solid black;
+    height: 500px;
+    width: 500px;
+}
+
+
+#padding{
+    background: red;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+
+#margin{
+    background-color: aqua;
+    border: 2px solid black;
+    margin: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+.block-with-height-and-width{
+    background: olivedrab;
+    height: 300px;
+    width: 500px;
+
+}
+
+
+#padding1{
+    display: block;
+    background-color: red;
+    padding: 30px;
+}
+
+
+#margin1{
+    display: block;
+    background-color:aqua;
+    margin: 50px;
+}
+
+
+
+
+
+
+
+.heightAndWidthToInline{
+    background-color: aqua;
+    height: 100px;
+    width: 400px;
+    display: inline-block;
+}
+
+
+#padding2{
+    background-color: blueviolet;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+#margin2{
+    background-color: darkgoldenrod;
+    margin: 40px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+.visible{
+    background-color: aqua;
+    /* visibility is by default visible */
+    visibility: visible;
+}
+
+.hidden{
+    background-color: chartreuse;
+    /* Compared to display:none, the difference is that the visibility:hidden occupies space but not visible */
+    visibility: hidden;
+}

@@ -1,0 +1,113 @@
+.static{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+
+    
+    /* in static mode the position will not works and by default the position = static */
+    position: static;
+    top: 50px;
+    left: 50px;
+}
+
+.relative{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+
+    
+    /* in relative position the element moves with the respect of its actual position */
+    position: relative;
+    bottom: 60px;
+    left: 300px;
+}
+
+.fixed{
+    background-color: lightcoral;
+    height: 100px;
+    width: 100px;
+
+    /* in fixed position the element moves with the respect of viewport and if we use fixed position the element will fixed on its place even if you scrool the fixed element will not move */
+   
+    position: fixed;
+    top: 0;
+    left: 1000px;
+}
+.sticky{
+    background-color: darkgoldenrod;
+    height: 100px;
+    width: 100px;
+    
+    /* in sticky top value means the gap b/w top end and element while sticking and left and right are same as relative */
+    /* the sticky works only in its parent. */
+    position: sticky;
+    /* top value is must to use sticky*/
+    top: 0;
+    left: 50px;
+}
+
+.parent{
+    height: 500px;
+    width: 500px;
+    border: 3px solid black;
+    position: relative;
+    /* margin: 50px; */
+    
+}
+.absolute{
+    background: red;
+    /* height: 100px; */
+    /* width: 100px; */
+
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.absolute1{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+
+    position:absolute;
+    bottom: 10px;
+    left: 1px;
+
+}
+
+/* z-index works like layers it is the position in tird dimention largest value of z-index indicates the most uper layer---In z-index it is essential to change the value of position from static to another.*/
+
+.z-index{
+    height: 400px;
+    width: 400px;
+    background-color: blueviolet;
+    z-index: 1;
+
+    position: relative;
+    /* top: 200px; */
+}
+
+.z-index2{
+    height:300px;
+    width: 300px;
+    background: orange;
+    z-index: 3;
+    
+    position: relative;
+    bottom: 30px;
+    
+    
+}
+
+.z-index3{
+    height: 200px;
+    width: 200px;
+    background-color: chocolate;
+    
+    position: relative;
+    z-index: 2;
+    bottom: 340px;
+    left: 190px;
+}
+
+

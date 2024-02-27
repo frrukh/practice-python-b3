@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image enlarge</title>
+</head>
+<body>
+    <button type="button" id="btn">Enlarge this Image</button>
+    <button type="button" id="btn1">Resmall this Image</button>
+    <br><br>
+    <img src="./1.jpg" alt="bat image" height="300px" id="img">
+
+    <script>
+        let btn=document.getElementById('btn');
+        let btn1=document.getElementById('btn1');
+        let img=document.getElementById('img');
+
+        btn.addEventListener('click',function(){
+            img.style.height='100vh';
+        });
+
+        btn1.addEventListener('click',function(){
+            img.style.height='300px';
+        });
+    </script>
+</body>
+</html>

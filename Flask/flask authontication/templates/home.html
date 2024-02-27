@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!-- include function of flask is used to import template file -->
+    <!-- include function maps on templates folder -->
+    {% include '_navbar.html' %}
+    <main>
+
+        <section class="py2 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    {% with messages = get_flashed_messages(with_categories=True) %}
+                        {% for category, message in messages %}
+                            <p class="alert alert-{{category}}">{{message}}</p>
+                        {% endfor %}
+                    {% endwith %}
+                    <h1 class="fw-light ">Paid Application</h1>
+                    <p class="lead text-body-secondary ">Something short and leading about the collection below—its
+                        contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply
+                        skip over it entirely.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-body-tertiary1">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                    <div class="card shadow-sm">
+                            <img src="{{url_for('static',filename='img/quiz.png')}}" alt="quiz app image">
+                            <div class="card-body">
+                                <h5 class="card-title">Quiz App</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    {% if user_name is not none %}
+                                        <div class="btn-group">
+                                            <a href="/quiz" class="btn btn-sm btn-outline-secondary">Start</a>
+                                        </div>
+                                    {% endif %}
+                                    <small class="text-body-secondary">1 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="card shadow-sm">
+                            <img src="{{url_for('static',filename='img/todo.png')}}" alt="quiz app image">
+                            <div class="card-body">
+                                <h5 class="card-title">TODO App</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    {% if user_name is not none %}
+                                        <div class="btn-group">
+                                            <a href="/todo" class="btn btn-sm btn-outline-secondary">View</a>
+                                        </div>
+                                    {% endif %}
+                                    <small class="text-body-secondary">3 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="card shadow-sm ">
+                            <img src="{{url_for('static',filename='img/weather.png')}}" alt="quiz app image">
+                            <div class="card-body">
+                                <h5 class="card-title">Weather App</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    {% if user_name is not none %}
+                                        <div class="btn-group">
+                                            <a href="/weather" class="btn btn-sm btn-outline-secondary">View</a>
+                                        </div>
+                                    {% endif %}
+                                    <small class="text-body-secondary">2 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script>
+</body>
+
+</html>

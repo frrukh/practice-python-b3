@@ -1,0 +1,48 @@
+.flex{
+
+    background-color: #00ffff;
+    height: 1000px;
+
+    display: flex;
+
+    /* flex direction---- row is by default*/
+        /* flex-direction: row; */
+        /* flex-direction: column; */
+
+    /* flex-wrap stops the brouser to make horizontal scrol and ramains the child element on its defined size by default its value is = nowrap*/
+        /* flex-wrap: nowrap; */
+        /* flex-wrap: wrap; */
+    /* wrap-raverse make the order of the childs in reverse */
+        /* flex-wrap: wrap-reverse; */
+    
+
+    /* to define both direction and wrap in single element we use flex-flow */
+        flex-flow: row wrap;
+        /* flex-flow: column nowrap; */
+
+    /* alignment */
+    /* horizontaly like row */
+        /* justify-content: start; */
+        /* justify-content: end; */
+        /* justify-content: center; */
+
+    /* verticaly like column */
+        /* align-items: start; */
+        /* align-items: end; */
+        /* align-items: center; */
+
+        /* equal space at start , end and between */
+        /* justify-content: space-evenly; */
+        /* single space on ends and doubble in between  */
+        /* justify-content: space-around; */
+        /* no space in ends only space in between */
+        justify-content: space-between;
+
+}
+
+.class{
+    height: 80px;
+    width: 80px;
+    background-color: gray;
+    /* margin: 30px; */
+}

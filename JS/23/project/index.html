@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dis{
+            display:none;
+        }
+
+        #input_container{
+            width: 200px;
+            font-weight: 500;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <label for="dropdown">Select your Country</label>
+        <select name="country" id="dropdown">
+            <option value=".">Select</option>
+            <option value="amarica" >Amarica</option>
+            <option value="england">England</option>
+            <option value="india">India</option>
+            <option value="china">China</option>
+        </select>
+        <br>
+        <br>
+        <div id="input_container"></div>
+        <br>
+        <button>Submit</button>
+    </form>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

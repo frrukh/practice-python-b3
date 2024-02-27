@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .display{
+            display: none;
+        }
+    </style>
+    <title>Signup</title>
+</head>
+
+<body>
+    {% include '_navbar.html' %}
+
+    <main>
+        <div class="d-flex flex-column align-items-center justify-content-center my-5">
+            <h1 class="my-5">Signup</h1>
+            <form action="/signup" method="POST">
+                {% with messages = get_flashed_messages(with_categories=True) %}
+                    {% for category, message in messages %}
+                        <p class="alert alert-{{category}}">{{message}}</p>
+                    {% endfor %}
+                {% endwith %}
+                <div class="row">
+                    <div class="col-6">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="first_name" id="first_name">
+                    </div>
+                    <div class="col-6">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="last_name" id="last_name">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="password">
+                    </div>
+                    <div class="col-6">
+                        <label for="confirm_password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="confirm_password" id="confirm_password">
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="is_admin" value="1" id="admin">
+                    <label for="admin" class="form-check-label">Admin</label>
+                </div>
+                <div class="col-12">
+                    <input type="text" class="form-control display" name="admin_code" id="admin_code" placeholder="Enter admin code" maxlength="10">
+                </div>
+                <button class="btn btn-primary my-3">Submit</button>
+          
+            </form>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script>
+    <script>
+        let checkbox = document.getElementById('admin');
+        let admin_code_input =document.querySelector('#admin_code')
+        let admin_code_label =document.querySelector('#admin_code_label')
+        checkbox.addEventListener('click',()=>{if (checkbox.checked) {
+            admin_code_input.classList.remove('display') 
+        } else {
+            admin_code_input.classList.add('display')
+        }})
+    </script>
+</body>
+
+</html>

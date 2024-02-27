@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='edit.css')}}">
+    <title>signup</title>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav__ul">
+                    <a href="/" class="nav__home">HOME</a>
+                    <a href="/quiz_app" class="nav__quiz_app">QUIZ APP</a>
+                    <a href="/todo_app" class="nav__todo_app">TODO APP</a>
+                    <a href="/weather_app" class="nav__weather_app">WEATHER APP</a>
+                    <a href="/signup" class="nav__signup">SIGNUP</a>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="heading">Edit User {{data[0]}}</h1>
+        <main class="main__body">
+            <form action="/edit/{{data[0]}}" method="POST">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="first_name" id="first_name" value="{{data[1]}}">
+                    </div>
+                    <div class="col-6">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="last_name" id="last_name" value="{{data[2]}}">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" value="{{data[3]}}">
+                </div>
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </main>
+
+    </div>
+    <script src="{{url_for('static',filename='js/bootstrap.mini.js')}}"></script>
+</body>
+
+</html>

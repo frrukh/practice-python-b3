@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .talha{
+                color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">Style is added.</h1>
+        <h1 id="heading1"> a heading1</h1>
+        
+        <div id="div"></div>
+        
+        <h2 id="h2">this will be over writed with innerText</h2>
+        <h2 id="heading2">this will be over writed with innerHTML</h2>
+
+        <p id="remove">this will be removed by method 1.</p>
+        <p id="remove1">this will be removed by method 2.</p>
+        
+
+        <a href="#" class="attrinute" id="attr">we will target its attributes</a>
+        <a href="#" class="attrinute1" id="attr1">we will target its attribute's value</a>
+
+
+        <h1 class="h1 h2 h3 h4 h5" id="class">customize the classes</h1>
+
+
+
+
+        <h2 id="dataset" data-serNum="p0923">we use datasets on it.</h2>
+        <h2 id="dataset1" data-ser_num="p0923" data-email="data@gmail.com" data-phone="0301">we use datasets on it.</h2>
+        <script>
+            // 1.
+            //  .style---to add style on any element.
+            //first we have to get the element and then store in a variable or style directly without saving in any variable.
+            
+            // without saving.
+                document.getElementById('heading').style.backgroundColor='yellow'; 
+            // with saving.
+                let head=document.getElementById('heading');
+                head.style.color='red';
+                head.style.textShadow='2px 2px 4px black';
+            
+            console.log(head);
+            
+             
+            // 2
+            // .createElement() ---to create a new element
+            // to create a new element.
+                let newP=document.createElement('p');
+            console.log(newP);//in this line the newP is empty but in next topic the newP is not empty but during console it breaks the top to down reading method and show the text in newP that is defined in next topic.but if we console with inner text or inner html it shows empty.
+            
+            // 3
+            // .innerText/innerHTML---to add the inner text or inner html in any element.
+            // if the element is empty it will add the text or html and if the element is not empty it will to add the content, first it will over write the content.means the first content will be deleted.
+            // inner text
+                newP.innerText='this is new paragraph created by js'; 
+            console.log(newP.innerText);
+            // inner HTML
+                let head1=document.getElementById('heading1');
+            head1.innerHTML='<i>(a heading 1 is overwrited)</i>'
+            
+            // 4
+            // .append()--- to add one or more new elements in the last of the given parent element that is present in html.
+            // to add a created element in html first we have to make a element in html with id in which our created element will go and then call the element with id and then append(means attach/add) the new element in that element.
+                let newSpan=document.createElement('span');
+                newSpan.innerHTML='<i>this is italic span created by js</i>'
+                let div=document.getElementById('div');
+            div.append(newP,newSpan);
+
+            // 5
+            // .appendChild()--- to add only one elment in the last of the given parent element that is present in html.
+                let newPar=document.createElement('p');
+                newPar.innerText="paragraph created by js used in append child";
+                div.appendChild(newPar);
+
+
+            // 6
+            // .prepend()---to add one or more elements in the start ot the given parent element that is present in html.
+                let newh2=document.createElement('h2');
+                newh2.innerHTML='<i>heading used by innerHTML and PREPEND</i>';
+                div.prepend(newh2);
+
+            
+            // 7
+            // innerHTML/innerText--- to over write the entire element
+            let head2=document.getElementById('h2');
+            let heading2=document.getElementById('heading2');
+            head2.innerText='<i><u>Over writed by js using innerText</u></i>'
+            heading2.innerHTML='<i><u>Over writed by js innerHTML</u></i>'
+
+            
+            // 8
+            // .remove()---to remove any element(tag) from the document.
+                // method 1.
+                let paragraph=document.getElementById('remove');
+                paragraph.remove();
+                // method 2.
+                document.getElementById('remove1').remove();
+
+            // 9
+            // .getAttribute---to get the value of the attribute
+                // method 1.
+                let anchor=document.getElementById('attr');
+                let link=anchor.getAttribute('href');
+                let clas=anchor.getAttribute('class');
+            console.log(link);
+            console.log(clas);
+                // method 2.
+                let id=document.getElementById('attr').id;
+                let classs=document.getElementById('attr').className;
+                console.log(classs);
+                console.log(id);
+
+            
+            // 10 ---to over write.(if we change class attribute it will not add a class it will overwrite the previous class so for class we use calsslist)
+            // .setAttribute(,)--- if the given attribute is already present in the element it will change its value and if the given attribute is not present in the element it will asign that attribute to the given element.
+            // syntax--- variablename.setAttribute('attributeName','attributeValue')
+            let anchor1=document.getElementById('attr1');
+            anchor1.setAttribute('href','https://www.google.com');
+            anchor1.setAttribute('target','_blank');
+            anchor1.setAttribute('style','color:red; text-Shadow:2px 2px 3px black')
+
+            anchor1.setAttribute('class','farrukh talha maqsood')
+
+        // CLASS LIST----ADD , REMOVE OR TOGGLE a single CLASS
+            // 11
+            // .classList---add class
+            let heading0=document.getElementById('class');
+            heading0.classList.add('the');
+            // .classList---remove class
+            heading0.classList.remove('h3');
+            heading0.classList.remove('h2');
+            // .classList---toggle class
+            // we can toggle it between add and remove means enter toggle to add the class and again enter same toggle to remove the class and so on...
+            heading0.classList.toggle('toggle');//added
+            heading0.classList.toggle('toggle');//removed
+            heading0.classList.toggle('toggle');//added
+            heading0.classList.toggle('toggle');//removed
+            heading0.classList.toggle('toggle');//added
+
+        // DATASET.
+            // 12
+            // datasets are used to store the non-appearing data in the form of attributes in html tags.its syntax is data-attributeName="value" after asigning this attribute we can manipulate or use its data(value) using javascript.
+
+            // access to dataset.
+            let D_set=document.getElementById('dataset');
+            let serealNum=D_set.dataset.sernum// in html the dataset name is serNum but as html is case insensitive so it will be considered as sernum-----so it is highly recomended to use the attributes name in lower case in order to keep away from confusion.
+            console.log(serealNum);
+            
+            // set dataset value
+            let dataSet=document.getElementById('dataset1');
+            dataSet.dataset.ser_num='P1 234';
+            dataSet.dataset.email='emailydataset@gmail.com';
+            dataSet.dataset.phone='03012345678';
+            
+
+
+            
+            
+
+
+
+            </script>
+</body>
+</html>

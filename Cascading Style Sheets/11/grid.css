@@ -1,0 +1,72 @@
+.container{
+    background-color: greenyellow;
+    
+    display: grid;
+    /* in grid template columns the number of values means the number of columns and the value is the width of the column in auto it will covers all the remaining space*/
+    /* grid-template-columns: 100px 100px auto; */
+    grid-template-columns: auto auto auto;
+
+    /* we use fr to devide the space equaly or 2times or more */
+    grid-template-columns: 1fr 1fr 2fr 3fr;
+
+    grid-gap: 10px;
+    
+}
+
+.grid-item{
+    height: 100px;
+    /* width: 100px; */
+    background-color: burlywood;
+    /* margin: 10px; */
+}
+
+
+
+.container1{
+    background-color: rgba(0, 106, 53, 0.336);
+
+    display: grid;
+
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+    /* syntax--- repeat(number of repetation , width of the element) */
+    /* grid-template-columns: repeat(7,1fr); */
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+
+}
+
+
+
+
+.container2 {
+    background-color: rgb(255, 145, 0);
+
+    display: grid;
+    /* grid-template-columns: minmax(50px,1100px); */
+    /* grid-template-columns: minmax(100px,auto) minmax(100px,auto) minmax(100px,auto);  */
+    /* grid-template-columns: minmax(100px,auto) minmax(100px,1fr) minmax(100px,auto);  */
+    grid-template-columns: repeat(3,minmax(100px,1fr));
+    grid-gap: 10px;
+}
+
+
+.container3{
+    background-color: aqua;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 200px 300px;
+
+    grid-gap: 10px;
+}
+
+
+.container4{
+    background-color: yellow;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(100px,1fr)) ;
+
+    grid-gap: 10px;
+
+}

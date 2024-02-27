@@ -1,0 +1,56 @@
+<!-- templating is used to prevent the repetition of code we just write the code in a file and import that file to other files -->
+<!-- the file name of this folder should start from underscore as a good practice. -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+  <div class="container">
+    <a class="navbar-brand fw-bolder text-primary" href="/">Applications</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExample07">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+        </li>
+        {% if user_name is not none %}
+          <li class="nav-item">
+            <a class="nav-link" href="/quiz">Quiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/todo">TODO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/weather">Weather</a>
+          </li>
+          {% if is_admin %}
+            <li class="nav-item">
+              <a class="nav-link" href="/addquestion" style="color: rgb(0, 136, 5);">Add Question <span style="color: yellow;">*</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/questions" style="color: rgb(0, 136, 5);">Questions <span style="color: yellow;">*</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users" style="color: rgb(0, 136, 5);">Users <span style="color: yellow;">*</span></a>
+            </li>
+          {% endif %}
+        {% endif %}
+      </ul>
+      {% if user_name is none %}
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">Signup</a>
+        </li>
+      </ul>
+        {% else %}
+        <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-warning" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{user_name}}</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          </ul>
+        </li>
+        </ul>
+        {% endif %}
+    </div>
+  </div>
+</nav>

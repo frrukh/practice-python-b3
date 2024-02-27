@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <div>
+        Sum all the array elements by using a loop.<br>       
+        Reverse the array by using a loop.<br>
+        Make a table of the given number with all possible loops.<br>
+        Find the largest number in an array by using a loop.<br>
+        Find the smallest number in an array by using a loop.<br>
+        Make an array to store the name of 5 students and iterate with for and foreach loop.<br>
+        Make an object to store the information of a student and iterate with a for-in loop.<br>
+    </div>
+    
+    <script>
+        // 1 --- for Loop.
+        // syntax--- for(define a variable with a initialized vlaue ; make a condition ; increment or decrement){ code to run}
+        // flow---1.check the initialized value 2.check condition 3.now if the condition is true it goes to the body and run all the code 4.now it again comeback to the first portion and apply increment 5.then again check condition 6.if it is true it again goto the body and then increment and check again . whenever the condition will false it stops to go to body and loop ends.
+            for (let i=0;i<20;i++){
+                console.log(i);
+                console.log("FArRukh");
+            }
+
+            // Reverse Iteration.
+            for (let i=10;i>0;i--){
+                console.log("--->"+i);
+                console.log("T")
+            }
+
+            // example
+            let array=['Farrukh',"Talha","Abdullah","Farhan","Furqan","Taha","Ali","Muzammil"];
+            for(let i=0;i<array.length;i++){
+                console.log(i);
+                console.log(array[i]);
+            }
+
+
+        // 2 --- for in Loop---it can be used for both arrays and objects.
+        // syntax--- for(defint a variable without assigning a value   in   array/object name){code to run}
+        // flow --- the defined variable is automatically asigned by the first index of array or the first key of object and the the code will run and after that it again go to variable , the next index or key will automatically asigned to variable and it again run the code . afer the last index or key the loop ended.
+            //with array.
+            let arr=['Waqas','Farrukh','Talha','Abdullah','Farhan','Furqan','Ali','Ahmed','Rehan','Shahan','Shoaib'];
+            console.log(arr);
+            for(let a in arr){
+                console.log(a+' : '+arr[a]);
+            }
+            //with object.
+            let obj={
+                name : "Farrukh",
+                age  :  19,
+                course: "Python",
+                regNo: "Re2341",
+                FavSub: "Computer"
+            }
+            console.log(obj);
+            for(let j in obj){
+                console.log(j+' : '+obj[j]);
+            }
+
+        // 3 --- for of Loop---used JUST for arrays NOT FOR OBJECTS.
+        //suntax--- same as for in loop , the only difference is that in for in loop the variable has given the value of index or key but in for in loop the variable has given the value of the data placed on the indexes one by one.
+        let arr1=['Wqs','Frukh','Ahmed','Ali','Rohan','Talha'];
+        console.log(arr1);
+        for (let a of arr1){
+            console.log(a);
+        }
+        // 4 --- foreach Loop.
+        // syntax --- arrayname.forEach("write a anonymous or arrow function like:" (data of array one by one,index of array---optional)=>{code to run});
+        //flow --- it automatically asign the data of array to the  first parameter and index of the array to the second parameter one by one.
+        arr1=['Wqs','Frukh','Ahmed','Ali','Rohan','Talha'];
+        arr1.forEach(function(val,ind){
+            console.log(ind+' : '+val);
+        })
+        // 5 --- while Loop.
+        // syntax---while(condition){code to run}
+        //flow--- in while loop we initialize the value before using the while loop , the compiler reads the condition if it is true it runs the code else loop ends, and we do increment or decrement inside the body of control the loop.
+        let i=0;
+        while(i<10){
+            console.log(i+" : "+"Farrukh");
+            i++;
+        }
+        // example
+        let u=0;
+        let val=true;
+        while(val==true){
+            console.log(u);
+            u++
+            if(u==20){
+                val=false;
+            }
+        }
+        // 6 --- do while Loop.
+        // syntax---same as while loop the only difference is , in do while loop first we run the code and the check the condition due to this reason the one time execution is must.
+        // flow---first run the body then check condition if it true it again run the body else loop ends.
+        arr1=['Wqs','Frukh','Ahmed','Ali','Rohan','Talha'];
+        let r=5;
+        do{
+            console.log(r+"    r is printed!");
+            r++;
+        }while(r<4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // practice
+
+        // Get the sum of two arrays…actually the sum of all their elements. P.S. Each array includes only integer numbers. Output is a number too.
+        let array1=[12,13,14,15,16,17,18,19,20];
+        let array2=[21,31,41,51,61,71,81,91,92];
+        let b=0;
+        for(let a of array1){
+            console.log(a);
+            b=a+b;
+            console.log('b  : '+b)
+        }
+        console.log('finaly b  : '+ b);
+        
+        let b1=0;
+        for(let a of array2){
+            console.log(a);
+            b1=a+b1;
+        }
+        console.log(b1);
+        console.log('The Sum of array1 and array2 is : '+(b+b1));
+
+
+        //Using a for loop print all even numbers up to and including n. Don’t include 0.
+        let n=56;
+        for(let i=1;i<=n;i++){
+            if(i%2==0){
+                document.write(i);
+
+            }
+        }
+
+        //Using a for loop output the elements in reverse order.
+        let ary=[1,2,3,4,5,6,7,8];
+        let lstInd=(ary.length)-1;
+        for(let i=lstInd;i>=0;i--){
+            console.log(ary[i]);
+        }
+
+        //Given two arrays of integers. Add up each element in the same position and create a new array containing the sum of each pair. Assume both arrays are of the same length.
+        let a=[12,14,16];
+        let a1=[2,4,6];
+        let len=a.length;
+        let len1=a1.length;
+        let result=[];
+        if(len==len1){
+        for (let i=0;i<len;i++){
+            result.push((a[i]+a1[i]));
+        }
+        console.log(result);
+    }else {console.log("Plese give the arrays of same length.");
+}
+
+
+//Given a string change the every second letter to an uppercase ‘Z’. Assume there are no space.
+let at="farrukh";
+console.log(at);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button color change</title>
+</head>
+<body>
+    <h1>create a button that changes its background color when clicked.</h1>
+    <button type="button" id="btn">Click to change my color</button>
+
+    <script>
+        let btn=document.getElementById('btn');
+        btn.addEventListener('click',function(){
+            this.style.backgroundColor='orange';
+            this.style.borderRadius='5px';
+        });
+    </script>
+</body>
+</html>

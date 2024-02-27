@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new input field</title>
+</head>
+<body>
+    <h1> implement a form that dynamically adds new input fields when a button is clicked.</h1>
+    <button type="button" id="btn">add new input field.</button>
+    <div id="container"></div>
+    <script>
+        let cont=document.getElementById('container');
+        let btn=document.getElementById('btn');
+        btn.addEventListener('click',function(){
+            let newInp=document.createElement('input');
+            newInp.setAttribute('type','text');
+            newInp.setAttribute('placeholder','New Input Field by JS.');
+            cont.append(newInp);
+        });
+    </script>
+</body>
+</html>

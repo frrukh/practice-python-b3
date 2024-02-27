@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassWork</title>
+    <style>
+        .bclr{
+            background-color: red;
+        }
+
+
+        #div{
+            display: inline-block;
+            height: 23px;
+            width: 50px;
+            border: 1px solid black;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- click to change the background coler -->
+    <button type="button" id="color">click to change color</button>
+    <button type="button" id="col">click to change color</button>
+
+    <hr>
+    <!-- increment and decrement -->
+    <h1>add or remove</h1>
+    <button type="button" id="decrement">Decrement</button>
+    <input type="number" value="0" id="div" readonly>
+    <button type="button" id="increment">Increment</button>
+    <br>
+    <button type="button" id="reset">Reset</button>
+    
+    <hr>
+    <!-- removing list items -->
+    <h1>click to remove</h1>
+    <ul>
+        <li id="item1">item 1</li>
+        <li id="item2">item 2</li>
+        <li id="item3">item 3</li>
+        <li id="item4">item 4</li>
+        <li id="item5">item 5</li>
+    </ul>
+
+    <hr>
+    <!-- change image size -->
+    <h1>click to enlarge the imange</h1>
+    <img src="./sec-bg-img.jpg" width="150px" id="img">
+    <button type="button" id="btn">Click to enlarge the image</button>
+
+    <hr>
+    <!-- change background color -->
+    <h1>select background color</h1>
+    <input type="color" name="color" id="clr">
+
+    <!-- adding new input field -->
+    <h1>adding new input fields</h1>
+    <div id="container">
+        <input type="text" placeholder="input-1">
+    </div>
+    <button type="button" id="btn1">click to add new input field</button>
+
+    <!-- luckey draw winner -->
+    <h1>luckey draw winner</h1>
+    <button type="button" id="btn2">click to check the winner</button>
+
+
+    <script src="./classWork.js"></script>
+</body>
+</html>

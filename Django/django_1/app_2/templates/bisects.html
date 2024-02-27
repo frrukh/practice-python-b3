@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisects</title>
+</head>
+<body>
+    <h1 style="color: chocolate;">Bisects</h1>
+    {% for bisect in products %}
+        <h1 style="color: brown; font-size: 4rem;">Name: {{bisect.name}}</h1>
+        {% for detail in bisect.details %}
+            <h1 style="color: darkblue; font-size: 3rem;">size: {{detail.size}}</h1>
+            <h1 style="color: orange; font-size: 2rem;">Qty: {{detail.quantity}}</h1>
+            <h1 style="color: red; font-size: 1.6rem;">price: {{detail.price}}</h1>
+            <hr>
+        {% endfor %}
+        <br>
+        <hr>
+        <hr>
+        {% endfor %}
+</body>
+</html>

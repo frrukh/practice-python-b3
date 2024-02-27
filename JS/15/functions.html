@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    
+    <script>
+        //functions.
+        // advantages 1.group a code   2.the code will executed only when we call it   3.no need to repete the complete code just call it.
+        //syntax = function name (parameters){code of the function}
+        //to use the functions first we have to define a function and then we call the function to use.
+
+        // 1- simple function without any parameter.
+            //defining a function.
+        function print_a_value(){
+            let a=21;
+            console.log(a);
+        }
+            //calling a function.
+        print_a_value();
+
+        // 2- function with a parameter.
+        function findSquare(x) {
+            console.log("x:"+x);
+            console.log("square of x :"+x**2);            
+        }
+
+        findSquare(9);
+
+        // 3-  function with multi paremeters.
+        function findSum(value1,value2,value3) {
+            console.log("value1:"+value1);            
+            console.log("value2:"+value2);            
+            console.log("value3:"+value3);
+            let sum = value1+value2+value3;
+            console.log(sum);            
+        }
+        findSum(12,12,12);
+        findSum(12,12,13);
+
+        // 4-  optical parameter (not-required) / we use it at last in parameter round-braces
+        function not_required(radius,pi=3.14){
+            console.log("radius:"+radius);
+            console.log("pi :"+pi);
+            area=pi*(radius**2);
+            console.log("area:"+area);
+        }
+        not_required(12,3.14233);
+        not_required(12);
+        not_required(15);
+
+
+
+
+    </script>
+</body>
+</html>

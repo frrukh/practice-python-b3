@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded bg-danger-subtle" aria-label="Thirteenth navbar example">
+        <div class="container-fluid bg-secondary">
+            <div class="collapse navbar-collapse d-lg-flex bg-danger" id="navbarsExample11">
+                <a class="navbar-brand col-lg-2 me-0 border-bottom border-2 border-primary text-success bg-dark" href="/">Paid Applications</a>
+                <ul class="navbar-nav col-lg-6 justify-content-lg-center bg-primary">
+                    <li class="nav-item bg-success">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item bg-danger">
+                        <a class="nav-link" href="/quiz">Quiz</a>
+                    </li>
+                    <li class="nav-item bg-success">
+                        <a class="nav-link" href="/todo">TODO</a>
+                    </li>
+                    <li class="nav-item bg-danger">
+                        <a class="nav-link" href="/weather">Weather</a>
+                    </li>
+                    <li class="nav-item dropdown bg-success">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">registration</a>
+                        <ul class="dropdown-menu bg-success">
+                            <li><a class="dropdown-item bg-primary" href="/signup">Signup</a></li>
+                            <li><a class="dropdown-item bg-white" href="/login">Login</a></li>
+                            <li><a class="dropdown-item bg-danger" href="/users">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="bg-danger">
+
+        <section class="py2 text-center container bg-black">
+            <div class="row py-lg-5 bg-dark">
+                <div class="col-lg-6 col-md-8 mx-auto bg-warning">
+                    <h1 class="fw-light bg-primary">Paid Application</h1>
+                    <p class="lead text-body-secondary bg-danger">Something short and leading about the collection below—its
+                        contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply
+                        skip over it entirely.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-body-tertiary1 bg-primary">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 bg-dark">
+                    <div class="col bg-danger">
+                    <div class="card shadow-sm bg-warning">
+                            <img src="../static/img/quiz.png" alt="quiz app image">
+                            <div class="card-body">
+                                <h5 class="card-title">Quiz App</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center bg-white">
+                                    <div class="btn-group">
+                                        <a href="/quiz" class="btn btn-sm btn-outline-secondary">Start</a>
+                                    </div>
+                                    <small class="text-body-secondary">1 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bg-white">
+                        <div class="card shadow-sm bg-warning">
+                            <img src="../todo.png" alt="quiz app image">
+                            <div class="card-body">
+                                <h5 class="card-title">TODO App</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center bg-white">
+                                    <div class="btn-group">
+                                        <a href="/todo" class="btn btn-sm btn-outline-secondary">View</a>
+                                    </div>
+                                    <small class="text-body-secondary">3 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bg-danger">
+                        <div class="card shadow-sm bg-warning">
+                            <img src="..img/weather.png" alt="quiz app image">
+                            <div class="card-body">
+                                <h5 class="card-title">Weather App</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center bg-white">
+                                    <div class="btn-group">
+                                        <a href="/weather" class="btn btn-sm btn-outline-secondary">View</a>
+                                    </div>
+                                    <small class="text-body-secondary">2 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script>
+</body>
+
+</html>

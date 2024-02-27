@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='signup.css')}}">
+    <title>signup</title>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav__ul">
+                    <a href="/" class="nav__home">HOME</a>
+                    <a href="/quiz_app" class="nav__quiz_app">QUIZ APP</a>
+                    <a href="/todo_app" class="nav__todo_app">TODO APP</a>
+                    <a href="/weather_app" class="nav__weather_app">WEATHER APP</a>
+                    <a href="/signup" class="nav__signup">SIGNUP</a>
+                </ul>
+            </nav>
+        </header>
+        <main class="main__body">
+            {% with messages = get_flashed_messages(with_categories=True) %}
+            {% for category,message in messages %}
+            <div class="alert alert-{{category}}" style="position: absolute; left: 40%; top: 20%;">{{message}}</div>
+            {% endfor %}
+            {% endwith %}
+            <form action="/signup" method="POST">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="first_name" id="first_name">
+                    </div>
+                    <div class="col-6">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="last_name" id="last_name">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="password">
+                    </div>
+                    <div class="col-6">
+                        <label for="confirm_password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="confirm_password" id="confirm_password">
+                    </div>
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </main>
+
+    </div>
+    <script>
+        document.querySelector('#first_name').select();
+    </script>
+    <script src="{{url_for('static',filename='js/bootstrap.mini.js')}}"></script>
+</body>
+
+</html>

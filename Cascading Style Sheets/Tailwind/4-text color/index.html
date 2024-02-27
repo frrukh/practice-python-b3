@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+// We can do theme configuration in colors i.e
+// if we pass colors in theme like given below then we can only use these colors and can't use any other color.
+// It means it will remove all tailwind defined colors and only use your defined colors.
+// uncomment this to check this out
+          // colors: {
+          //     transparent: 'transparent',
+          //     current: 'currentColor',
+          //     'white': '#ffffff',
+          //     'purple': '#3f3cbb',
+          //     'midnight': '#121063',
+          //     'metal': '#565584',
+          //     'tahiti': '#3ab7bf',
+          //     'silver': '#ecebff',
+          //     'bubble-gum': '#ff77e9',
+          //     'bermuda': '#78dcca',
+          // },
+
+
+            screens: {
+                'sm': '640px',
+                // => @media (min-width: 640px) { ... }
+
+                'md': '768px',
+                // => @media (min-width: 768px) { ... }
+
+                'lg': '1024px',
+                // => @media (min-width: 1024px) { ... }
+
+                'xl': '1280px',
+                // => @media (min-width: 1280px) { ... }
+
+                '2xl': '1536px',
+                // => @media (min-width: 1536px) { ... }
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+// Against theme configuration if we want to add new colors and remain the tailwind colors in use then we use extend block and define our colors in it.it will extend its colors.
+          //     'purple': '#3f3cbb',
+          //     'midnight': '#121063',
+          //     'metal': '#565584',
+          //     'tahiti': '#3ab7bf',
+          //     'silver': '#ecebff',
+          //     'bubble-gum': '#ff77e9',
+          //     'bermuda': '#78dcca',
+  // To create a color with value like tailwind default colors i.e red-(50-950) we should make an object like given.
+                  'farrukh':{
+                    '100':'#d4e9f7',
+                    '200':'#badcf3',
+                    '300':'#86c2ea',
+                    '400':'#56a9e1',
+                    '500':'#3c9cdd',
+                    '600':'#258ed4',
+                    '700':'#1f74ad',
+                    '800':'#19608f',
+                    '900':'#13496c',
+                  }
+              }
+            }
+          }
+        }
+        </script>
+        <title>Text colors</title>
+</head>
+<body style="background-color: rgb(255, 221, 153);">
+<!-- We can change the color of the text using text-color-darkness(50-950) class as given -->
+    <h1 class="text-pink-600">The quick brown fox jumps over the lazy dog.</h1>
+<!-- We can use our custom color code using text-[colorCodeHere] class as given -->
+    <h1 class="text-[#906340]">This our custom color</h1>
+    <h1 class="text-[rgba(255,131,322,0.5)]">This our custom color</h1>
+    <h1 class="text-[hsla(210,100%,60%,0.7)]">This our custom color</h1>
+
+
+<!-- To change the opacity of the text there are two methods  -->
+  <!-- 1--After applying the text color just add slash (/) and define the opacity in (0-100) format -->
+    <!-- In this formate we can just give the multiple of 5. i.e it will not maps on 67 or 66 but maps on 65 or 60 -->
+        <h1 class="text-pink-600/45">The quick brown fox jumps over the lazy dog.</h1>
+  <!-- 2--After applying the text color just add slash (/) and and define the opacity in [0.2] formate -->
+        <h1 class="text-pink-600/[0.09]">The quick brown fox jumps over the lazy dog.</h1>
+        
+<!-- To change the color on hover we have to add the hover class and then simply define the color -->
+    <h1 class="text-lime-600/[0.9] hover:text-blue-600/90">HOVER ME</h1>
+
+
+    <h1 class="text-farrukh-900">My own customized color in extend</h1>
+</body>
+</html>

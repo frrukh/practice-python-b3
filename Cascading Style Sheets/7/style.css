@@ -1,0 +1,77 @@
+.paragraph{
+    text-align: center;
+}
+#large_p{
+    text-align: justify;
+    /* text-align: center; */
+}
+.colored_p{
+    color: rgb(253, 4, 4);
+}
+.underlined_p{
+    /* text-decoration-line: none; */
+    /* text-decoration-line: overline; */
+    /* text-decoration-line: line-through; */
+    text-decoration-line: underline;
+
+    /* line color */
+
+    text-decoration-color: red;
+
+    /* line style */
+
+    /* text-decoration-style: dashed; */
+    /* text-decoration-style: dotted; */
+    /* text-decoration-style: double; */
+    /* text-decoration-style: none; */
+    text-decoration-style: wavy;
+
+    /* thickness of line */
+
+    text-decoration-thickness: 5px;
+
+    /* all of above in one */
+    /* syntax= underline or other,color,style,thickness */
+
+    text-decoration: overline darkblue wavy 2px;
+}
+#anc {
+    text-decoration: none;
+}
+.transform{
+    /* text-transform: none; */
+    /* text-transform: lowercase; */
+    /* text-transform: uppercase; */
+    text-transform: capitalize;
+}
+#large_paragraph{
+     /* text indent gives space at the start of the paragraph 
+     we use it in % to make this adjustable in different screen size */
+
+    text-indent: 5%;
+
+    /* line height defines the spacing b/w lines */
+
+    line-height: 40px;
+
+    letter-spacing: 4px;
+    word-spacing: 20px;
+}
+#first_word_color{   
+    color: red;
+}
+.shadow{
+    /* text-shadow: horizontal_value vertical_value blur color; */
+    
+    /* text-shadow: 1px 1px 1px red; */
+    text-shadow: 2px 2px 2px red , -2px -2px 2px blue;
+}
+#font{
+    /* font-family is used to change the font */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+}

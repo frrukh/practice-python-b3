@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    color: salmon;
+}
+h2{
+    font-size: 40px;
+    color: orange;
+}
+h3{
+    font-size: 30px;
+    color: hotpink;
+}

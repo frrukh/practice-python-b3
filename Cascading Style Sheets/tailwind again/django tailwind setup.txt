@@ -1,0 +1,110 @@
+install nodejs and django first
+go to 'django tailwind' or 
+'https://django-tailwind.readthedocs.io/en/latest/installation.html' on google
+
+here there are some steps to setup the tailwind in django project.
+
+after installing django and making a project... 
+
+1---
+    Install the django-tailwind package via pip:
+        python -m pip install django-tailwind
+
+2---
+    Add 'tailwind' to INSTALLED_APPS in settings.py:
+        INSTALLED_APPS = [
+        # other Django apps
+        'tailwind',
+        ]
+
+3---
+    Create a Tailwind CSS compatible Django app, I like to call it theme:
+        python manage.py tailwind init
+
+4---
+    Add your newly created 'theme' app to INSTALLED_APPS in settings.py:
+        INSTALLED_APPS = [
+        # other Django apps
+        'tailwind',
+        'theme'
+        ]
+
+5---
+    Register the generated 'theme' app by adding the following line to settings.py file:
+        TAILWIND_APP_NAME = 'theme'
+
+
+6---
+    Make sure that the INTERNAL_IPS list is present in the settings.py file and contains the 127.0.0.1 ip address:
+        INTERNAL_IPS = [
+            "127.0.0.1",
+        ]
+
+7---
+    Install Tailwind CSS dependencies, by running the following command:
+        python manage.py tailwind install
+
+        if not working first install:
+        pip install django-browser-reload
+
+8---
+    The Django Tailwind comes with a simple base.html template located at your_tailwind_app_name/templates/base.html. You can always extend or delete it if you already have a layout.
+
+9---
+    If you are not using the base.html template that comes with Django Tailwind, add {% tailwind_css %} to the base.html template:
+
+        {% load static tailwind_tags %}
+        ...
+        <head>
+        ...
+        {% tailwind_css %}
+        ...
+        </head>
+        The {% tailwind_css %} tag includes Tailwind’s stylesheet.
+
+10---
+    Let’s also add and configure django_browser_reload, which takes care of automatic page and css refreshes in the development mode. Add it to INSTALLED_APPS in settings.py:
+
+        INSTALLED_APPS = [
+        # other Django apps
+        'tailwind',
+        'theme',
+        'django_browser_reload'
+        ]
+
+11---
+    Staying in settings.py, add the middleware:
+
+        MIDDLEWARE = [
+        # ...
+        "django_browser_reload.middleware.BrowserReloadMiddleware",
+        # ...
+        ]
+    The middleware should be listed after any that encode the response, such as Django’s GZipMiddleware. The middleware automatically inserts the required script tag on HTML responses before </body> when DEBUG is True.
+
+12---
+    Include django_browser_reload URL in your root url.py:
+
+        from django.urls import include, path
+        urlpatterns = [
+            ...,
+            path("__reload__/", include("django_browser_reload.urls")),
+        ]
+
+13---
+    Now you can use a button to trigger browser reload on any page of your site! Just placeFinally, you should be able to use Tailwind CSS classes in HTML. Start the development server by running the following command in your terminal:
+
+        python manage.py tailwind start
+    
+
+
+IMPORTANT NOTE:
+    Sometimes (especially on Windows), the Python executable cannot find the npm binary installed on your system. In this case, you need to set the path to the npm executable in settings.py file manually (Linux/Mac):
+
+    NPM_BIN_PATH = '/usr/local/bin/npm'
+    On Windows, you may have npm on $PATH but it’s npm.cmd rather than npm. (You can call it from the terminal because $PATHEXT contains .cmd.) If so, please override the default NPM_BIN_PATH = 'npm':
+
+    NPM_BIN_PATH = 'npm.cmd'
+    Alternatively (and for maximum reliability), you can use a fully qualified path. It might look like this:
+
+    NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"

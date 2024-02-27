@@ -1,0 +1,85 @@
+h1{
+    text-transform:uppercase;
+}
+.clip{
+    height: 500px;
+    width: 500px;
+    background-color: brown;
+    border: 10px dashed black;
+    padding: 50px;
+
+    /* this is by default in which the backgorund color covers the padding and borders */
+    background-clip: border-box;
+
+    /* in this the background color covers the padding but not covers the border */
+    background-clip: padding-box;
+
+    /* in this the background color does not covers the pandding and border , it only covers the content */
+    background-clip: content-box;
+}
+
+    /* there are two types of units in css absolute and relative */
+    /* here we will discuss the relative units */
+
+.em{
+    background-color: blue;
+
+    font-size: 10px;
+    
+    /* 1em=the font size of the same element--in our case 1em=10px
+    if the font size is not given to the same element it will be considered in default font size */
+    height: 49em;
+    width: 49em;
+}
+
+
+
+
+html{
+    font-size: 9px;
+}
+
+.rem{
+    background-color: blueviolet;
+    /* 1rem=the font size of the root element i.e <html>--in our case 1rem=9px
+    if the font size is not given to the root element it will be considered in default font size */
+    
+
+    height: 40rem;
+    width: 45rem;
+}
+
+
+.vh{
+    background-color: black;
+    /* 1vh=1% of viewport height and 50vh=50% of viewport height */
+    height: 50vh;
+    width: 50vh;
+}
+
+.vw{
+    background-color: cyan;
+    /* 1vw=1% of viewport width and 50vw=50% of viewport width */
+
+    height: 50vw;
+    width: 50vw;
+}
+
+/* the persentage unit works according to parent means 10%=10% of parent not 10% of full screen and if the parent has no height and width the % unit does not works. */
+.parent{
+    border: 3px solid red;
+    height: 500px;
+    width: 500px;
+}
+.persentage{
+    background-color: blueviolet;
+    height:90%;
+    width: 90%;
+}
+
+.persentage1{
+    background-color: chartreuse;
+    height: 100%;
+    width: 50%;
+}
+

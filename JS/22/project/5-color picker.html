@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color picker</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1> create a color picker that changes the background color of a page element based on user selections.</h1>
+
+    <input type="color" id="clr">
+
+    <script>
+        let body=document.querySelector('body');
+        let clr=document.getElementById('clr');
+        clr.addEventListener('input',function(){
+            body.style.backgroundColor=clr.value;
+        });
+        
+    </script>
+</body>
+</html>

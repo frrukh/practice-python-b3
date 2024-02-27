@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn form element</title>
+</head>
+<body>
+    <h1>simple form with labels</h1>
+    <form method="get" action="">
+
+        <label for="name">User Name</label>
+        <input type="text" name="User_Name" id="name" value="enter user name" placeholder="enter user name">
+        <br><br>
+
+        <label for="phone_number">Phone Number</label>
+        <input type="number" name="Phone_Number" id="phone_number" placeholder="enter phone number" >
+        <br><br>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="Date_of_Birth" id="dob" placeholder="enter your date of birth">
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="example12@gmail.com">
+        <br><br>
+
+        <label for="pass">Password</label>
+        <input type="password" name="password" id="pass" placeholder="enter your password">
+        <br><br>
+            <!-- button the sumbit to submit the form  -->
+        <input type="submit" value="Login">
+        <br><br>
+            <!-- normal button to perfom any js task  -->
+        <input type="button" value="next">
+        <hr>
+     </form>
+
+    <!-- <form method="post" action="">
+
+        <hr>
+        <h1>radio buttons</h1>
+
+        <br>
+        <p>chose a t-shirt size</p>
+
+        <input type="radio" name="size" id="small" value="small">
+        <label for="small">Small</label>
+        <br>
+
+        <input type="radio" name="size" id="Med" value="medium">
+        <label for="Med">Medium</label>
+        <br>
+
+        <input type="radio" name="size" id="L" value="large">
+        <label for="L">Large</label>
+        <br>
+
+        <input type="radio" name="size" id="XL" vlaue="extra-large">
+        <label for="XL">Extra-Large</label>
+        <br><br><br>
+        <input type="reset">
+        <br><br>
+        <input type="submit"> 
+        <br><br><br>
+        
+        
+    </form> -->
+    <hr>
+
+
+
+
+
+
+        <h1>radio buttons</h1>
+    <form method="get" action="">
+            <label>Gender
+            <br>
+            <input type="radio" name="gender" value="male">Male
+            <br>
+            <input type="radio" name="gender" value="female">Female
+            </label>
+
+            <br>
+            <input type="submit">
+
+    </form>
+    <hr>
+    <form method="get" action="">
+        <label> Select T-shirt size
+        <br>
+        <input type="radio" name="size" value="S">Small
+        <br>
+        <input type="radio" name="size" value="M">Medium
+        <br>
+        <input type="radio" name="size" value="L">Large
+        <br>
+        <input type="radio" name="size" value="X-L">Extra-Large
+        <br>
+        </label>
+        <input type="submit" value="Login">
+    </form>
+    <hr>
+    <h1>checkboxes</h1>
+    <form method="get" action="">
+        <label> select the subjects
+        <br>
+        <input type="checkbox" name="math" value="1">Math
+        <br>
+        <input type="checkbox" name="english" value="1">English
+        <br>
+        <input type="checkbox" name="physics" value="1">Physics
+        <br>
+        <input type="checkbox" name="urdu" value="1">Urdu
+        <br>
+        <input type="submit" value="signin">
+        </label>
+    </form>
+
+
+
+
+    <hr>
+    <h1>Textarea in forms</h1>
+    
+    <form method="get" action="">
+        <label for="disc">Enter discription here:</label>
+        <br>
+        <textarea name="discription" id="disc" cols="30" rows="5" placeholder="farurkh" ></textarea>
+    </form>
+
+
+    <hr>
+    <h1>dropdown</h1>
+
+    <form method="GET" action="">
+        <label for="sub">Subject</label>
+        <br>
+        <select name="subject" id="sub">
+            <option value="">select subject</option>
+            <option value="math">Math</option>
+            <option value="English">English</option>
+            <option value="Physics">Physics</option>
+            <option value="urdu">Urdu</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="computer">Computer</option>
+        </select>
+        <button>login</button>
+    </form>
+
+    <hr>
+    <h1>groups in dropdown</h1>
+
+    <form method="get" action="">
+
+        <label for="area3">select your area
+        <select name="area" id="area3">
+                <option value="">chose area</option>
+            <optgroup label="Lhr">
+                <option value="shahdara">Shahadara</option>
+                <option value="32chock">32 chock</option>
+                <option value="thoker_niaz_baig">thoker naiz baig</option>
+            </optgroup>
+
+            <optgroup label="sheikhupura">
+                <option value="bati_chock">Bati Chock</option>
+                <option value="chand_chock">Chand Chock</option>
+                <option value="jinnah_park">Jinnah Park</option>
+            </optgroup>
+  
+            <optgroup label="Bahawalpur">
+                <option value="mandi_yazmaan">Mandi Yazmaan</option>
+                <option value="tail_wala">Tail Wala</option>
+                <option value="ahmad_pur">Ahmad Pur</option>
+            </optgroup>
+
+        </select>
+        </label>
+        <button>submit</button>
+
+
+    </form>
+        <hr>
+        <h1>button element</h1>
+    <form method="get" action="">
+        <!-- these three methods are used to genereate a submit button on the screen -->
+        <!-- by default the "type" of button element is submit  -->
+        <button type="submit">login</button>
+        <button>logout</button>
+        <input type="submit" value="go">
+        <hr>
+        <!-- these two methods are used to generate a simple button for js action on the same page -->
+        <button type="button">this is a button for js action on this page</button>
+        <input type="button" value="this is also only a button for js action">
+    </form>
+
+    <hr>
+    <h1>fieldset with legend nested in it</h1>
+    <form method="get" action="">
+        <fieldset>
+        <legend>personal info</legend>
+        <input type="text" name="first_name" id="frst_name" placeholder="enter first name">
+        <br>
+        <input type="text" name="last_name" id="lst_name" placeholder="enter last name">
+        <br>
+        <input type="number" name="phone" id="p_num" placeholder="enter phone number">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>id info</legend>
+        <input type="email" name="email" id="email1" placeholder="enter email">
+        <br>
+        <input type="password" name="password" id="password2" placeholder="enter password">
+        </fieldset>
+        <button>Submit</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+    <br><br><br><br><br>
+
+
+</body>
+</html>

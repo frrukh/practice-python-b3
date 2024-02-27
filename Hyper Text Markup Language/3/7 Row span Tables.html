@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Row span Table</title>
+
+        <style>
+            table , td , th {
+                border : 1px solid black ; 
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Row span Table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="2">Muhammad Talha</td>
+                    <td>Software Developer</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <!-- <td>Muhammad Talha</td> -->
+                    <td>Software Developer</td>
+                    <td rowspan="3">$5000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Muhammad Ali</td>
+                    <td>Software Developer</td>
+                    <!-- <td>$5000</td> -->
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hammad Khalid</td>
+                    <td>Frontend Developer</td>
+                    <!-- <td>$5000</td> -->
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total Salary</td>
+                    <td>$17000</td>
+                </tr>
+            </tfoot>
+            
+        </table>
+        <hr>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+</html>

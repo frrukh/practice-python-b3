@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Block Element Modifier</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- What is BEM? -->
+    <!-- It is a simple idea to assign the classes to the elements in a specific way that increases the readability of the code -->
+
+
+
+    <!-- Block has its independent class  -->
+    <header class="head">
+        <!-- Element has a class depended upon the parent and written as parent'sClass__childClass i.e head__logo -->
+        <div class="head__logo head__logo--color">direct child</div>
+        <!-- No matters that the Element is the direct child of block or indirect the class is denoted by same way not like parent'Class__child__GrandChildClass and so on -- it is wrong-->
+        <nav>
+            <ul>
+                <li><a href="" class="head__ancor"></a></li>
+                <li><a href="" class="head__ancor"></a></li>
+                <li><a href="" class="head__ancor"></a></li>
+                <li><a href="" class="head__ancor"></a></li>
+                <li><a href="" class="head__ancor"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

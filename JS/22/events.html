@@ -1,0 +1,273 @@
+<!--
+    TASKS.
+    <li><h2> create a button that changes its background color when clicked.</h2></li>
+    <li><h2> build a counter that increments when a button is clicked and displays the count on the page.</h2></li>
+    <li><h2> create a list of items. implement a way to remove an item when it is clicked.</h2></li>
+    <li><h2> create a button that enlarges the image when clicked.</h2></li>
+    <li><h2> create a color picker that changes the background color of a page element based on user selections.</h2></li>
+    <li><h2> implement a form that dynamically adds new input fields when a button is clicked.</h2></li>
+    <li><h2> create a function that displays an alert with a random fun fact when clicked.</h2></li>
+    <ul><li>  Math.floor(Math.random() * months.length) </li></ul>
+    <li><h2> create a button that simulates a lucky draw. when clicked, randomly select and display a winner from the participants.</h2></li>
+    <li><h2> when a button is clicked, display a random interesting fact from an array.</h2></li>
+    <li><h2> build a virtual dice roller that simulates rolling a standard six sided die. display the result when a button is clicked.</h2></li>
+</ol>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        #prev_default{
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 6px;
+            padding: 20px;
+            background-color: antiquewhite;
+        }
+        .div{
+            display: inline-block;
+        }
+        #d1{
+            background-color: aqua;
+            box-shadow: 2px 2px 3px black;
+            height: 400px;
+            width: 400px;
+        }
+        #d2{
+            background-color: orange;
+            box-shadow: 2px 2px 3px black;
+            height: 300px;
+            width: 300px;
+            margin-top: 20px;
+        }
+        #d3{
+            background-color: chocolate;
+            box-shadow: 2px 2px 3px black;
+            height: 200px;
+            width: 500px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        #d4{
+            background-color: blueviolet;
+            box-shadow: 2px 2px 3px black;
+            height: 400px;
+            width: 100px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        #dd1{
+            background-color: aqua;
+            box-shadow: 2px 2px 3px black;
+            height: 400px;
+            width: 400px;
+        }
+        #dd2{
+            background-color: orange;
+            box-shadow: 2px 2px 3px black;
+            height: 300px;
+            width: 300px;
+            margin-top: 20px;
+        }
+        #dd3{
+            background-color: chocolate;
+            box-shadow: 2px 2px 3px black;
+            height: 200px;
+            width: 500px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        #dd4{
+            background-color: blueviolet;
+            box-shadow: 2px 2px 3px black;
+            height: 400px;
+            width: 100px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .stop{
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+        #stop1{
+            margin-left: 40px;
+            margin: 100px;
+            height: 400px;
+            width: 400px;
+            background-color: bisque;
+        }
+        #stop2{
+            margin-left: 40px;
+            height: 350px;
+            width: 350px;
+            background-color: rgb(255, 140, 0);
+        }
+        #stop3{
+            margin-left: 40px;
+            height: 300px;
+            width: 300px;
+            background-color: rgb(0, 255, 42);
+        }
+        #stop4{
+            margin-left: 40px;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(255, 226, 8);
+        }
+        #stop5{
+            margin-left: 40px;
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+
+        .stoop{
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+        #stoop1{
+            margin-left: 40px;
+            margin: 100px;
+            height: 400px;
+            width: 400px;
+            background-color: bisque;
+        }
+        #stoop2{
+            margin-left: 40px;
+            height: 350px;
+            width: 350px;
+            background-color: rgb(255, 140, 0);
+        }
+        #stoop3{
+            margin-left: 40px;
+            height: 300px;
+            width: 300px;
+            background-color: rgb(0, 255, 42);
+        }
+        #stoop4{
+            margin-left: 40px;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(255, 226, 8);
+        }
+        #stoop5{
+            margin-left: 40px;
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- using addEventListener with all functions. -->
+    <button type="button" id="button">click(general)</button>
+    <br>
+    <br>
+    <button type="button" id="button1">click(anonymeous)</button>
+    <br>
+    <br>
+    <button type="button" id="button2">click(arrow)</button>
+    <br>
+    <br>
+    
+    <!-- using different specified words in first parameter of addEventListener. -->
+    <button type="button" id="mouse_over">click(mouse over)</button>
+    <br>
+    <br>
+    <button type="button" id="mouse_out">click(mouse out)</button>
+    <br>
+    <br>
+    
+    <input type="text" id="focus" placeholder="using focus"> 
+    <br>
+    <br>
+    <input type="text" id="blur" placeholder="using blur"> 
+    <br>
+    <br>
+    
+    
+    <!-- using multi functions on single element -->
+    <!-- on BUTTON -->
+    <button type="button" id="click_mouse_over_out">click , mouse over and out</button>
+    
+    <br>
+    <br>
+    <!-- on INPUT -->
+    <input type="text" id="focus_blur" placeholder="using focus and blur">
+
+    <br>
+    <br>
+
+    <!-- using prevent default -->
+    <form id="prev_default">
+        <input type="text" placeholder="enter your name">
+        <br>
+        <br>
+        <input type="text" placeholder="enter your password">
+        <br>
+        <br>
+        <button type="submit" id="pre">Submition is prevented and consoled</button>
+    </form>
+    
+    <br>
+    <br>
+    <!-- use event at once -->
+    <button type="button" id="once">once event</button>
+    <br>
+    <br>
+    <!-- propagation contorols -->
+
+    <!-- bubbling (default)-->
+    <div class="div" id="d1">1
+        <div class="div" id="d2">2
+            <div class="div" id="d3">3
+                <div class="div" id="d4">4</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- capturing -->
+    <div class="div" id="dd1">1
+        <div class="div" id="dd2">2
+            <div class="div" id="dd3">3
+                <div class="div" id="dd4">4</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- stop propagation -->
+
+    <div class="stop" id="stop1">111
+        <div class="stop" id="stop2">222
+            <div class="stop" id="stop3">333
+                <div class="stop" id="stop4">444
+                    <div class="stop" id="stop5">555</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stoop" id="stoop1">111
+        <div class="stoop" id="stoop2">222
+            <div class="stoop" id="stoop3">333
+                <div class="stoop" id="stoop4">444
+                    <div class="stoop" id="stoop5">555</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="contextmenu" style="height: 200px;width: 200px;background-color: orange;">contextmenu</div>
+
+
+
+
+
+    <script src="./events.js"></script>
+</body>
+</html>
